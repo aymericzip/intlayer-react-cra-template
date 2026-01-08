@@ -1,12 +1,10 @@
-// src/app.content.ts
-import { t, type Dictionary } from "intlayer";
-import { type ReactNode } from "react";
+import { type Dictionary, t } from 'intlayer';
+import type { ReactNode } from 'react';
 
-const appContent: Dictionary = {
-  key: "app",
+const appContent = {
+  key: 'app',
   content: {
     getStarted: t<ReactNode>({
-      // N'oubliez pas d'importer React si vous utilisez un React node dans votre contenu
       en: (
         <>
           Edit <code>src/App.tsx</code> and save to reload
@@ -24,14 +22,14 @@ const appContent: Dictionary = {
       ),
     }),
     reactLink: {
-      href: "https://reactjs.org",
+      href: 'https://reactjs.org',
       content: t({
-        en: "Learn React",
-        fr: "Apprendre React",
-        es: "Aprender React",
+        en: 'Learn React',
+        fr: 'Apprendre React',
+        es: 'Aprender React',
       }),
     },
   },
-};
+} satisfies Dictionary;
 
 export default appContent;

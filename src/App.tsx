@@ -1,10 +1,11 @@
-import logo from "./logo.svg";
-import "./App.css";
-import { IntlayerProvider, useIntlayer } from "react-intlayer";
-import { LocaleSwitcher } from "./components/LocaleSwitcher";
+import './App.css';
+import { useIntlayer } from 'react-intlayer';
+import { LocaleSwitcher } from './components/LangSwitcherDropDown';
+import logo from './logo.svg';
+import { LocaleRouter } from './Router';
 
-function AppContent() {
-  const content = useIntlayer("app");
+const AppContent = () => {
+  const content = useIntlayer('app');
 
   return (
     <header className="App-header">
@@ -21,20 +22,18 @@ function AppContent() {
       </a>
     </header>
   );
-}
+};
 
-function App() {
-  return (
-    <IntlayerProvider>
-      {/* <IntlayerEditorProvider> */}
-      <div className="App">
-        {/* Pour utiliser correctement le hook useIntlayer, vous devez accéder à vos données dans un composant enfant */}
-        <AppContent />
-        <LocaleSwitcher />
-      </div>
-      {/* </IntlayerEditorProvider> */}
-    </IntlayerProvider>
-  );
-}
+const App = () => (
+  <LocaleRouter>
+    <div className="App">
+      {/* To use the useIntlayer hook properly, you should access your data in a children component */}
+      <AppContent />
+    </div>
+    <div className="absolute right-5 bottom-5 z-50">
+      <LocaleSwitcher />
+    </div>
+  </LocaleRouter>
+);
 
 export default App;
