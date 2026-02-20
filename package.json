@@ -11,10 +11,10 @@
     "@types/node": "^16.18.123",
     "@types/react": "^18.3.18",
     "@types/react-dom": "^18.3.5",
-    "intlayer": "latest",
+    "intlayer": "canary",
     "react": "^18.3.1",
     "react-dom": "^18.3.1",
-    "react-intlayer": "latest",
+    "react-intlayer": "canary",
     "react-router-dom": "^7.12.0",
     "react-scripts": "5.0.1",
     "typescript": "^4.9.5",
@@ -22,8 +22,8 @@
   },
   "devDependencies": {
     "@craco/craco": "^7.1.0",
-    "react-scripts-intlayer": "latest",
-    "intlayer-editor": "latest",
+    "react-scripts-intlayer": "canary",
+    "intlayer-editor": "canary",
     "@tailwindcss/postcss": "4.1.18",
     "tailwindcss": "4.1.18"
   },
